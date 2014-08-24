@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D2B3B09E19A9D19500466A83 /* DeLoreanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B09D19A9D19500466A83 /* DeLoreanTests.swift */; };
-		D2B3B0B019A9D1F300466A83 /* Delorean.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B0AD19A9D1F300466A83 /* Delorean.swift */; };
+		D2B3B0B019A9D1F300466A83 /* DeLorean.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B0AD19A9D1F300466A83 /* DeLorean.swift */; };
 		D2B3B0B119A9D1F300466A83 /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B0AF19A9D1F300466A83 /* NSDate+Extensions.swift */; };
 		D2B3B0B219A9D20400466A83 /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B0AF19A9D1F300466A83 /* NSDate+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -19,7 +19,7 @@
 		D2B3B09D19A9D19500466A83 /* DeLoreanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeLoreanTests.swift; sourceTree = "<group>"; };
 		D2B3B0A819A9D1BF00466A83 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2B3B0AB19A9D1C600466A83 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2B3B0AD19A9D1F300466A83 /* Delorean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delorean.swift; sourceTree = "<group>"; };
+		D2B3B0AD19A9D1F300466A83 /* DeLorean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeLorean.swift; sourceTree = "<group>"; };
 		D2B3B0AF19A9D1F300466A83 /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +62,7 @@
 		D2B3B09019A9D19500466A83 /* DeLorean */ = {
 			isa = PBXGroup;
 			children = (
-				D2B3B0AD19A9D1F300466A83 /* Delorean.swift */,
+				D2B3B0AD19A9D1F300466A83 /* DeLorean.swift */,
 				D2B3B0AE19A9D1F300466A83 /* Extensions */,
 				D2B3B0AA19A9D1C600466A83 /* Supporting Files */,
 			);
@@ -208,7 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2B3B0B119A9D1F300466A83 /* NSDate+Extensions.swift in Sources */,
-				D2B3B0B019A9D1F300466A83 /* Delorean.swift in Sources */,
+				D2B3B0B019A9D1F300466A83 /* DeLorean.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +388,7 @@
 				D2B3B0A319A9D19500466A83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2B3B0A419A9D19500466A83 /* Build configuration list for PBXNativeTarget "DeLoreanTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +397,7 @@
 				D2B3B0A619A9D19500466A83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
