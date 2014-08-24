@@ -8,29 +8,48 @@
 
 import UIKit
 import XCTest
+import DeLorean
 
 class DeLoreanTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        DeLorean.backToThePresent()
+        
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testDeloreanStoresTheTravelToDate() {
+        let date = NSDate(timeIntervalSince1970: 10000)
+        
+        DeLorean.travelTo(date)
+        
+        XCTAssertEqual(date, NSDate.date())
+        XCTAssertEqual(date, NSDate())
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+    func testDeloreanCanTravelToSpecifiedYear() {
+        let year = 1999
+        
+        DeLorean.travelToYear(year)
+        
+        XCTAssertEqual(NSDate.date().year(), year)
+        XCTAssertEqual(NSDate().year(), year)
+    }
+    
+    func testDeloreanResetsCurrentDateWhenTravelingBackToThePresent() {
+        let timeInterval: NSTimeInterval = 10000
+        
+        let date = NSDate(timeIntervalSince1970: timeInterval)
+        DeLorean.travelTo(date)
+        
+        XCTAssertEqual(date, NSDate())
+        XCTAssertEqual(date, NSDate.date())
+        XCTAssertEqual(date.timeIntervalSince1970, timeInterval)
+        
+        DeLorean.backToThePresent()
+        
+        XCTAssertNotEqual(date, NSDate())
+        XCTAssertNotEqual(date, NSDate.date())
     }
     
 }

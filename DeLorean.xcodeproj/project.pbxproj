@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D2B3B09419A9D19500466A83 /* DeLorean.h in Headers */ = {isa = PBXBuildFile; fileRef = D2B3B09319A9D19500466A83 /* DeLorean.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2B3B09E19A9D19500466A83 /* DeLoreanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B09D19A9D19500466A83 /* DeLoreanTests.swift */; };
+		D2B3B0B019A9D1F300466A83 /* Delorean.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B0AD19A9D1F300466A83 /* Delorean.swift */; };
+		D2B3B0B119A9D1F300466A83 /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B0AF19A9D1F300466A83 /* NSDate+Extensions.swift */; };
+		D2B3B0B219A9D20400466A83 /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B0AF19A9D1F300466A83 /* NSDate+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D2B3B08E19A9D19500466A83 /* DeLorean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeLorean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2B3B09219A9D19500466A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2B3B09319A9D19500466A83 /* DeLorean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeLorean.h; sourceTree = "<group>"; };
 		D2B3B09919A9D19500466A83 /* DeLoreanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeLoreanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2B3B09C19A9D19500466A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2B3B09D19A9D19500466A83 /* DeLoreanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeLoreanTests.swift; sourceTree = "<group>"; };
+		D2B3B0A819A9D1BF00466A83 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2B3B0AB19A9D1C600466A83 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2B3B0AD19A9D1F300466A83 /* Delorean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delorean.swift; sourceTree = "<group>"; };
+		D2B3B0AF19A9D1F300466A83 /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,35 +62,44 @@
 		D2B3B09019A9D19500466A83 /* DeLorean */ = {
 			isa = PBXGroup;
 			children = (
-				D2B3B09319A9D19500466A83 /* DeLorean.h */,
-				D2B3B09119A9D19500466A83 /* Supporting Files */,
+				D2B3B0AD19A9D1F300466A83 /* Delorean.swift */,
+				D2B3B0AE19A9D1F300466A83 /* Extensions */,
+				D2B3B0AA19A9D1C600466A83 /* Supporting Files */,
 			);
 			path = DeLorean;
-			sourceTree = "<group>";
-		};
-		D2B3B09119A9D19500466A83 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D2B3B09219A9D19500466A83 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D2B3B09A19A9D19500466A83 /* DeLoreanTests */ = {
 			isa = PBXGroup;
 			children = (
 				D2B3B09D19A9D19500466A83 /* DeLoreanTests.swift */,
-				D2B3B09B19A9D19500466A83 /* Supporting Files */,
+				D2B3B0A719A9D1BF00466A83 /* Supporting Files */,
 			);
 			path = DeLoreanTests;
 			sourceTree = "<group>";
 		};
-		D2B3B09B19A9D19500466A83 /* Supporting Files */ = {
+		D2B3B0A719A9D1BF00466A83 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D2B3B09C19A9D19500466A83 /* Info.plist */,
+				D2B3B0A819A9D1BF00466A83 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2B3B0AA19A9D1C600466A83 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2B3B0AB19A9D1C600466A83 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2B3B0AE19A9D1F300466A83 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D2B3B0AF19A9D1F300466A83 /* NSDate+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,7 +109,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2B3B09419A9D19500466A83 /* DeLorean.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +207,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B3B0B119A9D1F300466A83 /* NSDate+Extensions.swift in Sources */,
+				D2B3B0B019A9D1F300466A83 /* Delorean.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B3B0B219A9D20400466A83 /* NSDate+Extensions.swift in Sources */,
 				D2B3B09E19A9D19500466A83 /* DeLoreanTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,7 +316,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DeLorean/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DeLorean/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -317,7 +331,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DeLorean/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DeLorean/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,7 +350,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = DeLoreanTests/Info.plist;
+				INFOPLIST_FILE = "DeLoreanTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -349,7 +363,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = DeLoreanTests/Info.plist;
+				INFOPLIST_FILE = "DeLoreanTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
