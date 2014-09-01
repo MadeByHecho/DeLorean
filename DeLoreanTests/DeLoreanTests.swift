@@ -51,5 +51,5 @@ class DeLoreanTests: XCTestCase {
         XCTAssertNotEqual(date, NSDate())
         XCTAssertNotEqual(date, NSDate.date())
     }
-    
+
 }

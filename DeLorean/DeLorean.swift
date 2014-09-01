@@ -40,13 +40,15 @@ public class DeLorean {
     }
     
     private func swizzle() {
-        swizzleClassMethodForClassName("NSDate", originalSelectorName: "date", newSelectorName: "deloreanDate")
-        swizzleClassMethodForClassName("NSDate", originalSelectorName: "dateWithTimeIntervalSinceNow", newSelectorName: "deloreanDateWithTimeIntervalSinceNow")
-        swizzleInstanceMethodForClassName("NSDate", originalSelectorName: "timeIntervalSinceReferenceDate", newSelectorName: "deloreanTimeIntervalSinceReferenceDate")
+        let className = "NSDate"
+
+        swizzleClassMethodForClassName(className, originalSelectorName: "date", newSelectorName: "deloreanDate")
+        swizzleClassMethodForClassName(className, originalSelectorName: "dateWithTimeIntervalSinceNow", newSelectorName: "deloreanDateWithTimeIntervalSinceNow")
+        swizzleInstanceMethodForClassName(className, originalSelectorName: "timeIntervalSinceReferenceDate", newSelectorName: "deloreanTimeIntervalSinceReferenceDate")
 
         swizzleInstanceMethodForClassName("__NSPlaceholderDate", originalSelectorName: "init", newSelectorName: "deloreanInit")
-        swizzleInstanceMethodForClassName("NSDate", originalSelectorName: "initWithTimeIntervalSinceNow", newSelectorName: "deloreanInitWithTimeIntervalSinceNow:")
-        swizzleInstanceMethodForClassName("NSDate", originalSelectorName: "timeIntervalSinceNow", newSelectorName: "deloreanTimeIntervalSinceNow:")
+        swizzleInstanceMethodForClassName(className, originalSelectorName: "initWithTimeIntervalSinceNow", newSelectorName: "deloreanInitWithTimeIntervalSinceNow:")
+        swizzleInstanceMethodForClassName(className, originalSelectorName: "timeIntervalSinceNow", newSelectorName: "deloreanTimeIntervalSinceNow:")
     }
 
     private func swizzleInstanceMethodForClassName(className: String, originalSelectorName: String, newSelectorName: String) {
