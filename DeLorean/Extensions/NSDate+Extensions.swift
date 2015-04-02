@@ -9,40 +9,36 @@
 
 import Foundation
 
-extension NSDate {
+public extension NSDate {
     
-    func year() -> Int {
-        let components = NSCalendar.currentCalendar().components(.YearCalendarUnit, fromDate: self)
-        let year = components.year
+    var year: Int {
+        let year = NSCalendar.currentCalendar().component(.CalendarUnitYear, fromDate: self)
         return year
     }
     
-    class func dateFromYear(year: Int, months: Int, days: Int, hours: Int, minutes: Int, seconds: Int) -> NSDate? {
-        let calendar = NSCalendar.currentCalendar()
-        let components = NSDateComponents()
-        components.calendar = calendar
-        
-        if year != 0 {
-            components.year = year
-        }
-        if months != 0 {
-            components.month = months
-        }
-        if days != 0 {
-            components.day = days
-        }
-        if hours != 0 {
-            components.hour = hours
-        }
-        if minutes != 0 {
-            components.minute = minutes
-        }
-        if seconds != 0 {
-            components.second = seconds
-        }
-        
-        let date = calendar.dateFromComponents(components)
-        return date
+    var month: Int {
+        let month = NSCalendar.currentCalendar().component(.CalendarUnitMonth, fromDate: self)
+        return month
+    }
+    
+    var day: Int {
+        let day = NSCalendar.currentCalendar().component(.CalendarUnitDay, fromDate: self)
+        return day
+    }
+    
+    var hour: Int {
+        let hour = NSCalendar.currentCalendar().component(.CalendarUnitHour, fromDate: self)
+        return hour
+    }
+    
+    var minute: Int {
+        let minute = NSCalendar.currentCalendar().component(.CalendarUnitMinute, fromDate: self)
+        return minute
+    }
+    
+    var second: Int {
+        let second = NSCalendar.currentCalendar().component(.CalendarUnitSecond, fromDate: self)
+        return second
     }
 
 }

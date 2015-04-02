@@ -10,7 +10,7 @@ import Foundation
 
 private let _DeLoreanSharedInstance = DeLorean()
 
-public class DeLorean {
+public final class DeLorean {
     
     private var date: NSDate? = nil
     
@@ -31,7 +31,7 @@ public class DeLorean {
     }
 
     public class func travelToYear(year: Int) {
-        let date = NSDate.dateFromYear(year, months: 0, days: 0, hours: 0, minutes: 0, seconds: 0)
+        let date = NSCalendar.currentCalendar().dateFromComponents(year.years)
         travelTo(date)
     }
     
@@ -52,14 +52,14 @@ public class DeLorean {
     }
 
     private func swizzleInstanceMethodForClassName(className: String, originalSelectorName: String, newSelectorName: String) {
-        var originalMethod: Method = class_getInstanceMethod(NSClassFromString(className), Selector.convertFromStringLiteral(originalSelectorName))
-        var newMethod: Method = class_getInstanceMethod(NSClassFromString(className), Selector.convertFromStringLiteral(newSelectorName))
+        var originalMethod: Method = class_getInstanceMethod(NSClassFromString(className), Selector(originalSelectorName))
+        var newMethod: Method = class_getInstanceMethod(NSClassFromString(className), Selector(newSelectorName))
         method_exchangeImplementations(originalMethod, newMethod)
     }
 
     private func swizzleClassMethodForClassName(className: String, originalSelectorName: String, newSelectorName: String) {
-        var originalMethod: Method = class_getClassMethod(NSClassFromString(className), Selector.convertFromStringLiteral(originalSelectorName))
-        var newMethod: Method = class_getClassMethod(NSClassFromString(className), Selector.convertFromStringLiteral(newSelectorName))
+        var originalMethod: Method = class_getClassMethod(NSClassFromString(className), Selector(originalSelectorName))
+        var newMethod: Method = class_getClassMethod(NSClassFromString(className), Selector(newSelectorName))
         method_exchangeImplementations(originalMethod, newMethod)
     }
     
