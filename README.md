@@ -82,3 +82,7 @@ As Test targets do not have the "Embedded Binaries" section, the frameworks must
     ![](http://i.imgur.com/rpnyWGH.png)
 
 This is not 'the one and only way' to use Carthage to manage dependencies, for further reference check out the [Carthage documentation](https://github.com/Carthage/Carthage/blob/master/README.md)
+
+Credits & Contact
+
+DeLorean was originally inspired by the Objective-C framework named [TUDelorean](https://github.com/tuenti/TUDelorean), which in turn was inspired by the rubygem [delorean](https://github.com/bebanjo/delorean). 
