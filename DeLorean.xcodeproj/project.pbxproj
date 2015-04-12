@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		D2B3B09E19A9D19500466A83 /* DeLoreanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B09D19A9D19500466A83 /* DeLoreanTests.swift */; };
 		D2B3B0B019A9D1F300466A83 /* DeLorean.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B0AD19A9D1F300466A83 /* DeLorean.swift */; };
-		D2C4B2DC1ACBE48C0033F111 /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4B2DB1ACBE48C0033F111 /* NSDate+Extensions.swift */; };
-		D2EB3C121A667AAA00C0C3AA /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB3C111A667AAA00C0C3AA /* Int+Extensions.swift */; };
 		D2EB3C141A6680F300C0C3AA /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB3C131A6680F300C0C3AA /* TestExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,8 +19,6 @@
 		D2B3B0A819A9D1BF00466A83 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2B3B0AB19A9D1C600466A83 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2B3B0AD19A9D1F300466A83 /* DeLorean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeLorean.swift; sourceTree = "<group>"; };
-		D2C4B2DB1ACBE48C0033F111 /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extensions.swift"; sourceTree = "<group>"; };
-		D2EB3C111A667AAA00C0C3AA /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		D2EB3C131A6680F300C0C3AA /* TestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				D2B3B0AD19A9D1F300466A83 /* DeLorean.swift */,
-				D2B3B0AE19A9D1F300466A83 /* Extensions */,
 				D2B3B0AA19A9D1C600466A83 /* Supporting Files */,
 			);
 			path = DeLorean;
@@ -96,15 +91,6 @@
 				D2B3B0AB19A9D1C600466A83 /* Info.plist */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D2B3B0AE19A9D1F300466A83 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				D2C4B2DB1ACBE48C0033F111 /* NSDate+Extensions.swift */,
-				D2EB3C111A667AAA00C0C3AA /* Int+Extensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +198,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2C4B2DC1ACBE48C0033F111 /* NSDate+Extensions.swift in Sources */,
-				D2EB3C121A667AAA00C0C3AA /* Int+Extensions.swift in Sources */,
 				D2B3B0B019A9D1F300466A83 /* DeLorean.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

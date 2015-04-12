@@ -29,9 +29,49 @@ class DeLoreanTests: XCTestCase {
     func testDeloreanCanTravelToSpecifiedYear() {
         let year = 1999
         
-        DeLorean.travelToYear(year)
+        DeLorean.travelTo(year: year)
         
-        NSDate().year.shouldEqual(year)
+        yearFromDate(NSDate()).shouldEqual(year)
+    }
+    
+    func testDeloreanCanTravelToASpecifiedMonth() {
+        let month = 4
+        
+        DeLorean.travelTo(month: month)
+        
+        monthFromDate(NSDate()).shouldEqual(month)
+    }
+    
+    func testDeloreanCanTravelToASpecifiedDay() {
+        let day = 28
+        
+        DeLorean.travelTo(day: day)
+        
+        dayFromDate(NSDate()).shouldEqual(day)
+    }
+    
+    func testDeloreanCanTravelToASpecifiedHour() {
+        let hour = 12
+        
+        DeLorean.travelTo(hour: hour)
+        
+        hourFromDate(NSDate()).shouldEqual(hour)
+    }
+    
+    func testDeloreanCanTravelToASpecifiedMinute() {
+        let minute = 16
+        
+        DeLorean.travelTo(minute: minute)
+        
+        minuteFromDate(NSDate()).shouldEqual(minute)
+    }
+    
+    func testDeloreanCanTravelToASpecifiedSecond() {
+        let second = 55
+        
+        DeLorean.travelTo(second: second)
+        
+        secondFromDate(NSDate()).shouldEqual(second)
     }
     
     func testDeloreanResetsCurrentDateWhenTravelingBackToThePresent() {
@@ -48,114 +88,35 @@ class DeLoreanTests: XCTestCase {
         date.shouldNotEqual(NSDate())
     }
     
-    func testAddingAYearToADate() {
-        let year = 1999
-        
-        DeLorean.travelToYear(year)
-        
-        let nextYear = NSDate() + 1.year
-        
-        (year + 1).shouldEqual(nextYear.year)
+    //MARK: Private
+    
+    private func yearFromDate(date: NSDate) -> Int {
+        let year = NSCalendar.currentCalendar().component(.CalendarUnitYear, fromDate: date)
+        return year
     }
     
-    func testAddingYearsToADate() {
-        let year = 1999
-        
-        DeLorean.travelToYear(year)
-        
-        let futureYear = NSDate() + 5.years
-        
-        (year + 5).shouldEqual(futureYear.year)
+    private func monthFromDate(date: NSDate) -> Int {
+        let month = NSCalendar.currentCalendar().component(.CalendarUnitMonth, fromDate: date)
+        return month
     }
     
-    func testAddingAMonthToADate() {
-        let currentMonth = NSDate().month
-        
-        let nextMonth = NSDate() + 1.month
-        
-        (currentMonth + 1).shouldEqual(nextMonth.month)
+    private func dayFromDate(date: NSDate) -> Int {
+        let day = NSCalendar.currentCalendar().component(.CalendarUnitDay, fromDate: date)
+        return day
     }
     
-    func testAddingMonthsToADate() {
-        let currentMonth = NSDate().month
-        
-        let futureMonth = NSDate() + 6.months
-        
-        (currentMonth + 6).shouldEqual(futureMonth.month)
+    private func hourFromDate(date: NSDate) -> Int {
+        let hour = NSCalendar.currentCalendar().component(.CalendarUnitHour, fromDate: date)
+        return hour
     }
     
-    func testAddingADayToADate() {
-        let currentDay = NSDate().day
-        
-        let nextDay = NSDate() + 1.day
-        
-        (currentDay + 1).shouldEqual(nextDay.day)
+    private func minuteFromDate(date: NSDate) -> Int {
+        let minute = NSCalendar.currentCalendar().component(.CalendarUnitMinute, fromDate: date)
+        return minute
     }
     
-    func testAddingDaysToADate() {
-        let currentDay = NSDate().day
-        
-        let futureDay = NSDate() + 4.days
-        
-        (currentDay + 4).shouldEqual(futureDay.day)
+    private func secondFromDate(date: NSDate) -> Int {
+        let second = NSCalendar.currentCalendar().component(.CalendarUnitSecond, fromDate: date)
+        return second
     }
-
-    func testAddingAHourToADate() {
-        let currentHour = NSDate().hour
-        
-        let nextHour = NSDate() + 1.hour
-        
-        (currentHour + 1).shouldEqual(nextHour.hour)
-    }
-    
-    func testAddingHoursToADate() {
-        let currentHour = NSDate().hour
-        
-        var futureHour = NSDate() + 8.hours
-        
-        (currentHour + 8).shouldEqual(futureHour.hour)
-    }
-    
-    func testAddingAMinuteToADate() {
-        let currentMinute = NSDate().minute
-        
-        let nextMinute = NSDate() + 1.minute
-        
-        (currentMinute + 1).shouldEqual(nextMinute.minute)
-    }
-    
-    func testAddingMinutesToADate() {
-        let currentMinute = NSDate().minute
-        
-        let futureMinute = NSDate() + 15.minutes
-        
-        (currentMinute + 15).shouldEqual(futureMinute.minute)
-    }
-    
-    func testAddingASecondToADate() {
-        let currentSecond = NSDate().second
-        
-        let nextSecond = NSDate() + 1.second
-        
-        (currentSecond + 1).shouldEqual(nextSecond.second)
-    }
-    
-    func testAddingSecondsToADate() {
-        let currentSecond = NSDate().second
-        
-        let futureSecond = NSDate() + 12.seconds
-        
-        (currentSecond + 12).shouldEqual(futureSecond.second)
-    }
-    
-    func testRemovingAYearFromADate() {
-        let year = 1999
-        
-        DeLorean.travelToYear(year)
-        
-        let previousYear = NSDate() + 1.year.ago
-        
-        (year - 1).shouldEqual(previousYear.year)
-    }
-
 }
