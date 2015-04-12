@@ -55,6 +55,8 @@ func testWeWishOurUsersHappyBirthday() {
 
 DeLorean for now is intentionally simple and I actually removed some NSDate and Int extensions before publishing it.  Hopefully this simplicity serves you well and allows your code and tests to remain clear without mucking things up too much.
 
+Because DeLorean is meant to be used as a Testing framework, the best place to see it in action is in the tests for DeLorean itself.  DeLorean's tests also use [Miles](https://github.com/MadeByHecho/miles) a wrapper around XCTest to make Unit Tests just a bit more readable.
+
 ## Installation
 The following instructions were taken and repurposed from [Quick](https://github.com/Quick/Quick) because it is the best resource I've seen for integrating with a Test Target.  As such please note that instead of dragging in Quick and Nimble you'll be dragging in DeLorean.
 
