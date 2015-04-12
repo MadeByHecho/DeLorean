@@ -3,7 +3,7 @@
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-DeLorean is a simple testing framework that allows you to exercise production code that depends on NSDate.  DeLorean allows you to specify the current time when running tests, so your tests don't pass if you run them at Noon but fail if you run them at 6.
+DeLorean is a simple testing framework that allows you to exercise production code that depends on NSDate.  DeLorean allows you to explicitly specify the current time when running tests, so your tests don't pass if you run them at Noon but fail if you run them at 6.
 
 
 ## Usage
