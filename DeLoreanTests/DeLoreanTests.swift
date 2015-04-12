@@ -9,6 +9,7 @@
 import UIKit
 import XCTest
 import DeLorean
+import Miles
 
 class DeLoreanTests: XCTestCase {
     

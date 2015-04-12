@@ -1,0 +1,41 @@
+# Miles
+**A thin wrapper around XCTest Marcos to make tests just a bit more readable.**
+
+Miles is a simple solution to an XCTest problem.  With other Swift testing solutions [Quick](https://github.com/Quick/Quick) and [Nimble](https://github.com/Quick/Nimble) you're forced to trade solid Xcode Tools integration for readability and ease (Authors Note. Quick and Nimble are both amazing and you should definitely check them out).  With Miles you get solid Xcode integration, such as the ability to run single tests from the Xcode gutter, but still excellent readability.
+
+Miles is named after Darius Miles, a former professional basketball player who also had a role in the 2004 Movie 'The Perfect Score', where he and 5 students try to steal the SAT.
+
+## Usage
+
+Miles.swift defines all the extensions, so make sure it's either included in your Test Target or that you import Miles in the class you're trying to test.  Then when you say want to validate that the 5+5 = 10 you can do this:
+
+```swift
+func testThatFivePlusFiveEqualsTen() {
+	let ten = 10
+	ten.shouldEqual(5 + 5)
+}
+```
+
+Using the XCTestMacros that same test would look like this:
+
+```swift
+func testThatFivePlusFiveEqualsTen() {
+	let ten = 10
+	XCTAssertEqual(ten, 5 + 5, "Expected 5 + 5 to equal 10")
+}
+```
+
+Miles not only makes it more readable but also provides that default message for you to help you debug a failed test faster (Just in case you're still using XCTest after this you know the message is optional right?).
+
+Miles currently provides extensions for:
+
+* String
+* Character
+* Int
+* Float
+* Double
+* Bool
+* NSObject
+* Array
+* Dictionary
+* Optional
