@@ -26,8 +26,12 @@ public class DeLorean {
         return DeLorean.sharedInstance.date
     }
     
-    public class func travelTo(date: NSDate?) {
+    public class func travelTo(date: NSDate?, closure: (() -> Void)? = nil) {
         DeLorean.sharedInstance.date = date
+        if let closure = closure {
+            closure()
+            DeLorean.backToThePresent()
+        }
     }
     
     public class func travelTo(year: Int = 2015, month: Int = 1, day: Int = 2, hour: Int = 12, minute: Int = 30, second: Int = 3) -> NSDate? {

@@ -89,6 +89,20 @@ class DeLoreanTests: XCTestCase {
         date.shouldNotEqual(NSDate())
     }
     
+    func testDeLoreanTravelToWithClosureAutoTravelsBackToThePresent() {
+        let originalTimeInterval = NSDate().timeIntervalSince1970
+        let timeInterval: NSTimeInterval = 10000
+        
+        let date = NSDate(timeIntervalSince1970: timeInterval)
+        DeLorean.travelTo(date) {
+            date.shouldEqual(NSDate())
+            date.timeIntervalSince1970.shouldEqual(timeInterval)
+        }
+        
+        date.shouldNotEqual(NSDate())
+        originalTimeInterval.shouldBeCloseTo(NSDate().timeIntervalSince1970, withAccuracy: 0.01)
+    }
+    
     //MARK: Private
     
     private func yearFromDate(date: NSDate) -> Int {

@@ -3,7 +3,7 @@
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-DeLorean is a simple testing framework that allows you to exercise production code that depends on NSDate.  DeLorean allows you to explicitly specify the current time when running tests, so your tests don't pass if you run them at Noon but fail if you run them at 6.
+DeLorean is a µframework that allows you to exercise production code that depends on NSDate.  DeLorean allows you to explicitly specify the current time when running tests, so your tests don't pass if you run them at Noon but fail if you run them at 6.
 
 
 ## Usage
@@ -53,6 +53,20 @@ func testWeWishOurUsersHappyBirthday() {
 }
 ```
 
+DeLorean also provides an optional parameter to the `travelTo` method, that will only adjust the date in a given block.  Implementing it looks something like this.
+
+```swift
+func testWeWishOurUsersHappyBirthday() {
+	DeLorean.travelTo(date: user.birthday) {
+		// some code that validates that we wished them a happy birthday
+		// All dates return in this closure will return user.birthday
+	}
+	// All dates returned outside of this closure will be the current date/time.
+}
+```
+
+Using the optional closure parameter is useful for cases where you only need to adjust the date in a single test case and it doesn't make sense to travel `backToThePresent` in your `tearDown` method at the end of *every* test case.  
+
 DeLorean for now is intentionally simple and I actually removed some NSDate and Int extensions before publishing it.  Hopefully this simplicity serves you well and allows your code and tests to remain clear without mucking things up too much.
 
 Because DeLorean is meant to be used as a Testing framework, the best place to see it in action is in the tests for DeLorean itself.  DeLorean's tests also use [Miles](https://github.com/MadeByHecho/miles) a wrapper around XCTest to make Unit Tests just a bit more readable.
@@ -83,6 +97,8 @@ As Test targets do not have the "Embedded Binaries" section, the frameworks must
 
 This is not 'the one and only way' to use Carthage to manage dependencies, for further reference check out the [Carthage documentation](https://github.com/Carthage/Carthage/blob/master/README.md)
 
-Credits & Contact
+## Credits & Contact
 
-DeLorean was originally inspired by the Objective-C framework named [TUDelorean](https://github.com/tuenti/TUDelorean), which in turn was inspired by the rubygem [delorean](https://github.com/bebanjo/delorean). 
+DeLorean was originally inspired by the Objective-C framework named [TUDelorean](https://github.com/tuenti/TUDelorean), which in turn was inspired by the rubygem [delorean](https://github.com/bebanjo/delorean).
+
+If you have any questions I'm [@ScottPetit](http://twitter.com/ScottPetit) on Twitter.
