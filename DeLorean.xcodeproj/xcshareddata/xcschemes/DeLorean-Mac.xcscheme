@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D20880011A9201C100C6D7AC"
-               BuildableName = "Miles.framework"
-               BlueprintName = "Miles"
-               ReferencedContainer = "container:Miles.xcodeproj">
+               BlueprintIdentifier = "D202D6561B0DB2C900F957C7"
+               BuildableName = "DeLorean.framework"
+               BlueprintName = "DeLorean-Mac"
+               ReferencedContainer = "container:DeLorean.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D20AD96E1A91D15E0043E5C5"
-               BuildableName = "MilesTests.xctest"
-               BlueprintName = "MilesTests"
-               ReferencedContainer = "container:Miles.xcodeproj">
+               BlueprintIdentifier = "D202D6601B0DB2C900F957C7"
+               BuildableName = "DeLorean-MacTests.xctest"
+               BlueprintName = "DeLorean-MacTests"
+               ReferencedContainer = "container:DeLorean.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D20AD96E1A91D15E0043E5C5"
-               BuildableName = "MilesTests.xctest"
-               BlueprintName = "MilesTests"
-               ReferencedContainer = "container:Miles.xcodeproj">
+               BlueprintIdentifier = "D202D6601B0DB2C900F957C7"
+               BuildableName = "DeLorean-MacTests.xctest"
+               BlueprintName = "DeLorean-MacTests"
+               ReferencedContainer = "container:DeLorean.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D20880011A9201C100C6D7AC"
-            BuildableName = "Miles.framework"
-            BlueprintName = "Miles"
-            ReferencedContainer = "container:Miles.xcodeproj">
+            BlueprintIdentifier = "D202D6561B0DB2C900F957C7"
+            BuildableName = "DeLorean.framework"
+            BlueprintName = "DeLorean-Mac"
+            ReferencedContainer = "container:DeLorean.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,16 +75,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D20880011A9201C100C6D7AC"
-            BuildableName = "Miles.framework"
-            BlueprintName = "Miles"
-            ReferencedContainer = "container:Miles.xcodeproj">
+            BlueprintIdentifier = "D202D6561B0DB2C900F957C7"
+            BuildableName = "DeLorean.framework"
+            BlueprintName = "DeLorean-Mac"
+            ReferencedContainer = "container:DeLorean.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -94,16 +93,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D20880011A9201C100C6D7AC"
-            BuildableName = "Miles.framework"
-            BlueprintName = "Miles"
-            ReferencedContainer = "container:Miles.xcodeproj">
+            BlueprintIdentifier = "D202D6561B0DB2C900F957C7"
+            BuildableName = "DeLorean.framework"
+            BlueprintName = "DeLorean-Mac"
+            ReferencedContainer = "container:DeLorean.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

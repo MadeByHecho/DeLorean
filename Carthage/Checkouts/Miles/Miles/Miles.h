@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Tastemade. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import <XCTest/XCTest.h>
 
 //! Project version number for Miles.

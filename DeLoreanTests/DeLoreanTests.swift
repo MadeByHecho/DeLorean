@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Scott Petit. All rights reserved.
 //
 
-import UIKit
 import XCTest
 import DeLorean
 import Miles
@@ -30,7 +29,7 @@ class DeLoreanTests: XCTestCase {
     func testDeloreanCanTravelToSpecifiedYear() {
         let year = 1999
         
-        DeLorean.travelTo(year: year)
+        DeLorean.travelTo(year)
         
         yearFromDate(NSDate()).shouldEqual(year)
     }
@@ -106,32 +105,32 @@ class DeLoreanTests: XCTestCase {
     //MARK: Private
     
     private func yearFromDate(date: NSDate) -> Int {
-        let year = NSCalendar.currentCalendar().component(.CalendarUnitYear, fromDate: date)
+        let year = NSCalendar.currentCalendar().component(.Year, fromDate: date)
         return year
     }
     
     private func monthFromDate(date: NSDate) -> Int {
-        let month = NSCalendar.currentCalendar().component(.CalendarUnitMonth, fromDate: date)
+        let month = NSCalendar.currentCalendar().component(.Month, fromDate: date)
         return month
     }
     
     private func dayFromDate(date: NSDate) -> Int {
-        let day = NSCalendar.currentCalendar().component(.CalendarUnitDay, fromDate: date)
+        let day = NSCalendar.currentCalendar().component(.Day, fromDate: date)
         return day
     }
     
     private func hourFromDate(date: NSDate) -> Int {
-        let hour = NSCalendar.currentCalendar().component(.CalendarUnitHour, fromDate: date)
+        let hour = NSCalendar.currentCalendar().component(.Hour, fromDate: date)
         return hour
     }
     
     private func minuteFromDate(date: NSDate) -> Int {
-        let minute = NSCalendar.currentCalendar().component(.CalendarUnitMinute, fromDate: date)
+        let minute = NSCalendar.currentCalendar().component(.Minute, fromDate: date)
         return minute
     }
     
     private func secondFromDate(date: NSDate) -> Int {
-        let second = NSCalendar.currentCalendar().component(.CalendarUnitSecond, fromDate: date)
+        let second = NSCalendar.currentCalendar().component(.Second, fromDate: date)
         return second
     }
 }

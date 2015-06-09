@@ -93,7 +93,7 @@ public extension Float {
     
     func shouldBeCloseTo(float: Float, withAccuracy accuracy: Float, file: String = __FILE__, line: UInt = __LINE__) {
         let description = "Expected \(self) to be within \(accuracy) of \(float)"
-        XCTAssertEqualWithAccuracy(self, float, accuracy, description, file: file, line: line)
+        XCTAssertEqualWithAccuracy(self, float, accuracy: accuracy, description, file: file, line: line)
     }
 }
 
@@ -125,7 +125,7 @@ public extension Double {
     
     func shouldBeCloseTo(double: Double, withAccuracy accuracy: Double, file: String = __FILE__, line: UInt = __LINE__) {
         let description = "Expected \(self) to be within \(accuracy) of \(double)"
-        XCTAssertEqualWithAccuracy(self, double, accuracy, description, file: file, line: line)
+        XCTAssertEqualWithAccuracy(self, double, accuracy: accuracy, description, file: file, line: line)
     }
 }
 

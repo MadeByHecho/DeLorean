@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DeLorean-Mac.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>DeLorean.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +22,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>D202D6561B0DB2C900F957C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D202D6601B0DB2C900F957C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D2B3B08D19A9D19500466A83</key>
 		<dict>
 			<key>primary</key>

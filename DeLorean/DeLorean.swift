@@ -57,14 +57,14 @@ public class DeLorean {
     }
     
     private func swizzleInstanceMethodForClassName(className: String, originalSelectorName: String, newSelectorName: String) {
-        var originalMethod: Method = class_getInstanceMethod(NSClassFromString(className), Selector(originalSelectorName))
-        var newMethod: Method = class_getInstanceMethod(NSClassFromString(className), Selector(newSelectorName))
+        let originalMethod: Method = class_getInstanceMethod(NSClassFromString(className), Selector(originalSelectorName))
+        let newMethod: Method = class_getInstanceMethod(NSClassFromString(className), Selector(newSelectorName))
         method_exchangeImplementations(originalMethod, newMethod)
     }
     
     private func swizzleClassMethodForClassName(className: String, originalSelectorName: String, newSelectorName: String) {
-        var originalMethod: Method = class_getClassMethod(NSClassFromString(className), Selector(originalSelectorName))
-        var newMethod: Method = class_getClassMethod(NSClassFromString(className), Selector(newSelectorName))
+        let originalMethod: Method = class_getClassMethod(NSClassFromString(className), Selector(originalSelectorName))
+        let newMethod: Method = class_getClassMethod(NSClassFromString(className), Selector(newSelectorName))
         method_exchangeImplementations(originalMethod, newMethod)
     }
     

@@ -175,7 +175,7 @@ class ArrayTests: XCTestCase {
 
     func testShouldContain() {
         let array = [1, 2, 3, 4, 5]
-        shouldContain(array, 1)
+        shouldContain(array, item: 1)
     }
 }
 
@@ -187,7 +187,7 @@ class DictionaryTests: XCTestCase {
     
     func testShouldContain() {
         let dictionary = [1 : "one", 2 : "two"]
-        shouldContain(dictionary, "one")
+        shouldContain(dictionary, item: "one")
     }
 }
 

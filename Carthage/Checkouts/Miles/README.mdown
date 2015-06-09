@@ -1,33 +1,54 @@
 # Miles
 **A thin wrapper around XCTest Marcos to make tests just a bit more readable.**
 
-Miles is a simple solution to an XCTest problem.  With other Swift testing solutions [Quick](https://github.com/Quick/Quick) and [Nimble](https://github.com/Quick/Nimble) you're forced to trade solid Xcode Tools integration for readability and ease (Authors Note. Quick and Nimble are both amazing and you should definitely check them out).  With Miles you get solid Xcode integration, such as the ability to run single tests from the Xcode gutter, but still excellent readability.
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-Miles is named after Darius Miles, a former professional basketball player who also had a role in the 2004 Movie 'The Perfect Score', where he and 5 students try to steal the SAT.
+Miles is a simple solution to an XCTest readability problem.  
+
+It feels like every 6 months or so I hop on the Quick/Kiwi bandwagon (because of my frustration with the readability of XCTest) only to grow frustrated with some of the limitations that Xcode imposes.  Miles is the simplest solution to the problem that I could come up with.  
+
+Miles is named after [Darius Miles](http://en.wikipedia.org/wiki/Darius_Miles), a former professional basketball player who also had a role in the 2004 Movie 'The Perfect Score', where he and 5 students try to steal the SAT.
+
+## Background
+
+Apple's Xcode includes the XCTest framework, which provides assertion macros to test whether code behaves properly. For example, to assert that `1 + 1 = 2`, XCTest has you write:
+
+```swift
+XCTAssertEqual(1 + 1, 2, "expected one plus one to equal two")
+```
+
+In a more robust matcher framework like [Nimble](https://github.com/quick/nimble) you get the much more readable:
+
+```swift
+expect(1 + 1).to(equal(2))
+```
+
+In Miles you get something that I think is even more readable:
+
+```swift
+(1+1).shouldEqual(2)
+```
 
 ## Usage
 
-Miles.swift defines all the extensions, so make sure it's either included in your Test Target or that you import Miles in the class you're trying to test.  Then when you say want to validate that the 5+5 = 10 you can do this:
+Miles.swift defines all the extensions, so make sure it's either included in your Test Target or that you import Miles in the class you're trying to test.  Then when you want to validate that the 5+5 = 10 you can do this:
 
 ```swift
 func testThatFivePlusFiveEqualsTen() {
-	let ten = 10
-	ten.shouldEqual(5 + 5)
+	10.shouldEqual(5 + 5)
 }
 ```
 
-Using the XCTestMacros that same test would look like this:
+If you wanted to do something a bit more complicated like validate that a certain string has a suffix, that would look like this:
 
 ```swift
-func testThatFivePlusFiveEqualsTen() {
-	let ten = 10
-	XCTAssertEqual(ten, 5 + 5, "Expected 5 + 5 to equal 10")
+func testThatMilesEndsInLes() {
+	let miles = "miles"
+	miles.shouldHaveSuffix("les")
 }
 ```
 
-Miles not only makes it more readable but also provides that default message for you to help you debug a failed test faster (Just in case you're still using XCTest after this you know the message is optional right?).
-
-Miles currently provides extensions for:
+Miles currently provides extensions for many of the swift standard types including:
 
 * String
 * Character
@@ -36,6 +57,31 @@ Miles currently provides extensions for:
 * Double
 * Bool
 * NSObject
-* Array
-* Dictionary
-* Optional
+
+Because Swift doesn't currently support public extensions on generic types, Miles provides Global functions to validate Array, Dictionary and Optional types.
+
+## Installation
+The following instructions were taken and repurposed from [Quick](https://github.com/Quick/Quick) because it is the best resource I've seen for integrating with a Test Target.  As such please note that instead of dragging in Quick and Nimble you'll be dragging in Miles.
+
+
+## How to Install Miles using [Carthage](https://github.com/Carthage/Carthage)
+As Test targets do not have the "Embedded Binaries" section, the frameworks must be added to the target's "Link Binary With Libraries" as well as a "Copy Files" build phase to copy them to the target's Frameworks destination.
+ > As Carthage builds dynamic frameworks, you will need a valid code signing identity set up.
+
+1. Add Miles to your **[Cartfile.private](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfileprivate)**
+
+    ```
+    github "MadeByHecho/Miles"
+    ```
+
+2. Run `carthage update`
+3. From your `Carthage/Build/[platform]/` directory, add Miles to your test target's **Link Binary With Libraries** build phase
+    ![](http://i.imgur.com/pBkDDk5.png)
+
+4. For your test target, create a new build phase of type **Copy Files**
+    ![](http://i.imgur.com/jZATIjQ.png)
+
+5. Set the **Destination** to **Frameworks**, then add the Miles framework
+    ![](http://i.imgur.com/rpnyWGH.png)
+
+This is not 'the one and only way' to use Carthage to manage dependencies, for further reference check out the [Carthage documentation](https://github.com/Carthage/Carthage/blob/master/README.md)
