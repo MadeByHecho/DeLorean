@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D202D6561B0DB2C900F957C7"
                BuildableName = "DeLorean.framework"
-               BlueprintName = "DeLorean-Mac"
+               BlueprintName = "DeLorean-OSX"
                ReferencedContainer = "container:DeLorean.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -58,7 +58,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D202D6561B0DB2C900F957C7"
             BuildableName = "DeLorean.framework"
-            BlueprintName = "DeLorean-Mac"
+            BlueprintName = "DeLorean-OSX"
             ReferencedContainer = "container:DeLorean.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -80,7 +80,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D202D6561B0DB2C900F957C7"
             BuildableName = "DeLorean.framework"
-            BlueprintName = "DeLorean-Mac"
+            BlueprintName = "DeLorean-OSX"
             ReferencedContainer = "container:DeLorean.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -98,7 +98,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D202D6561B0DB2C900F957C7"
             BuildableName = "DeLorean.framework"
-            BlueprintName = "DeLorean-Mac"
+            BlueprintName = "DeLorean-OSX"
             ReferencedContainer = "container:DeLorean.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

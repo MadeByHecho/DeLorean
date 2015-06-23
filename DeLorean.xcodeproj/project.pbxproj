@@ -206,9 +206,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D202D6561B0DB2C900F957C7 /* DeLorean-Mac */ = {
+		D202D6561B0DB2C900F957C7 /* DeLorean-OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D202D66E1B0DB2C900F957C7 /* Build configuration list for PBXNativeTarget "DeLorean-Mac" */;
+			buildConfigurationList = D202D66E1B0DB2C900F957C7 /* Build configuration list for PBXNativeTarget "DeLorean-OSX" */;
 			buildPhases = (
 				D202D6521B0DB2C900F957C7 /* Sources */,
 				D202D6531B0DB2C900F957C7 /* Frameworks */,
@@ -219,7 +219,7 @@
 			);
 			dependencies = (
 			);
-			name = "DeLorean-Mac";
+			name = "DeLorean-OSX";
 			productName = "DeLorean-Mac";
 			productReference = D202D6571B0DB2C900F957C7 /* DeLorean.framework */;
 			productType = "com.apple.product-type.framework";
@@ -243,9 +243,9 @@
 			productReference = D202D6611B0DB2C900F957C7 /* DeLorean-MacTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D2B3B08D19A9D19500466A83 /* DeLorean */ = {
+		D2B3B08D19A9D19500466A83 /* DeLorean-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D2B3B0A119A9D19500466A83 /* Build configuration list for PBXNativeTarget "DeLorean" */;
+			buildConfigurationList = D2B3B0A119A9D19500466A83 /* Build configuration list for PBXNativeTarget "DeLorean-iOS" */;
 			buildPhases = (
 				D2B3B08919A9D19500466A83 /* Sources */,
 				D2B3B08A19A9D19500466A83 /* Frameworks */,
@@ -256,7 +256,7 @@
 			);
 			dependencies = (
 			);
-			name = DeLorean;
+			name = "DeLorean-iOS";
 			productName = DeLorean;
 			productReference = D2B3B08E19A9D19500466A83 /* DeLorean.framework */;
 			productType = "com.apple.product-type.framework";
@@ -315,9 +315,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2B3B08D19A9D19500466A83 /* DeLorean */,
+				D2B3B08D19A9D19500466A83 /* DeLorean-iOS */,
 				D2B3B09819A9D19500466A83 /* DeLoreanTests */,
-				D202D6561B0DB2C900F957C7 /* DeLorean-Mac */,
+				D202D6561B0DB2C900F957C7 /* DeLorean-OSX */,
 				D202D6601B0DB2C900F957C7 /* DeLorean-MacTests */,
 			);
 		};
@@ -392,7 +392,7 @@
 /* Begin PBXTargetDependency section */
 		D202D6641B0DB2C900F957C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D202D6561B0DB2C900F957C7 /* DeLorean-Mac */;
+			target = D202D6561B0DB2C900F957C7 /* DeLorean-OSX */;
 			targetProxy = D202D6631B0DB2C900F957C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -589,7 +589,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "scottpetit.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DeLorean;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -605,7 +605,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "scottpetit.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DeLorean;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -649,7 +649,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D202D66E1B0DB2C900F957C7 /* Build configuration list for PBXNativeTarget "DeLorean-Mac" */ = {
+		D202D66E1B0DB2C900F957C7 /* Build configuration list for PBXNativeTarget "DeLorean-OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D202D66A1B0DB2C900F957C7 /* Debug */,
@@ -676,7 +676,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D2B3B0A119A9D19500466A83 /* Build configuration list for PBXNativeTarget "DeLorean" */ = {
+		D2B3B0A119A9D19500466A83 /* Build configuration list for PBXNativeTarget "DeLorean-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D2B3B0A219A9D19500466A83 /* Debug */,
