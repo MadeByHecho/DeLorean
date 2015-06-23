@@ -39,7 +39,7 @@ class CharacterTests: XCTestCase {
     let character: Character = "A"
     
     func testThatAEqualsA() {
-        character.shouldEqual("A")
+        character.shouldEqual("A" as Character)
     }
 }
 
@@ -68,32 +68,37 @@ class IntTests: XCTestCase {
 }
 
 class FloatTests: XCTestCase {
-    let number: Float = 42
+    let number: Float = 42.0
     
     func testThat42ShouldEqual42() {
-        number.shouldEqual(42)
+        let float: Float = 42
+        number.shouldEqual(float)
     }
     
     func testThat42IsGreaterThan41() {
-        number.shouldBeGreaterThan(41)
+        let float: Float = 41
+        number.shouldBeGreaterThan(float)
     }
     
     func testThat42IsLessThan43() {
-        number.shouldBeLessThan(43)
+        let float: Float = 43
+        number.shouldBeLessThan(float)
     }
     
     func testThat42ShouldBeGreaterThaOrEqualTo42() {
-        let fortyTwo: Float = 42
+        let fortyTwo: Float = 42.0
         fortyTwo.shouldBeGreaterThanOrEqualTo(number)
     }
     
     func testThat41ShouldBeLessThanOrEqualTo42() {
-        let fortyOne: Float = 41
+        let fortyOne: Float = 41.0
         fortyOne.shouldBeLessThanOrEqualTo(number)
     }
     
     func testThat45ShouldBeCloseTo42With3Accuracy() {
-        number.shouldBeCloseTo(45, withAccuracy: 3)
+        let float: Float = 45
+        let accuracy: Float = 3
+        number.shouldBeCloseTo(float, withAccuracy: accuracy)
     }
 }
 
@@ -101,29 +106,29 @@ class DoubleTests: XCTestCase {
     let number: Double = 42
     
     func testThat42ShouldEqual42() {
-        number.shouldEqual(42)
+        number.shouldEqual(42.0)
     }
     
     func testThat42IsGreaterThan41() {
-        number.shouldBeGreaterThan(41)
+        number.shouldBeGreaterThan(41.0)
     }
     
     func testThat42IsLessThan43() {
-        number.shouldBeLessThan(43)
+        number.shouldBeLessThan(43.0)
     }
     
     func testThat42ShouldBeGreaterThaOrEqualTo42() {
-        let fortyTwo: Double = 42
+        let fortyTwo: Double = 42.0
         fortyTwo.shouldBeGreaterThanOrEqualTo(number)
     }
     
     func testThat41ShouldBeLessThanOrEqualTo42() {
-        let fortyOne: Double = 41
+        let fortyOne: Double = 41.0
         fortyOne.shouldBeLessThanOrEqualTo(number)
     }
     
     func testThat41ShouldBeCloseTo42With3Accuracy() {
-        number.shouldBeCloseTo(41, withAccuracy: 1)
+        number.shouldBeCloseTo(41.0, withAccuracy: 1.0)
     }
 }
 
@@ -170,19 +175,19 @@ class NSObjectTests: XCTestCase {
 class ArrayTests: XCTestCase {
     func testShouldBeEmpty() {
         let emptyArray = [Float]()
-        shouldBeEmpty(emptyArray)
+        emptyArray.shouldBeEmpty()
     }
 
     func testShouldContain() {
         let array = [1, 2, 3, 4, 5]
-        shouldContain(array, item: 1)
+        array.shouldContain(1)
     }
 }
 
 class DictionaryTests: XCTestCase {
     func testShouldBeEmpty() {
         let emptyDictionary = [Int : String]()
-        shouldBeEmpty(emptyDictionary)
+        emptyDictionary.shouldBeEmpty()
     }
     
     func testShouldContain() {
@@ -194,11 +199,11 @@ class DictionaryTests: XCTestCase {
 class OptionalTests: XCTestCase {
     func testShouldBeNil() {
         let optionalString: String? = nil
-        shouldBeNil(optionalString)
+        optionalString.shouldBeNil()
     }
     
     func testShouldNotBeNil() {
         let optionalString: String? = "I'm a real string"
-        shouldNotBeNil(optionalString)
+        optionalString.shouldNotBeNil()
     }
 }

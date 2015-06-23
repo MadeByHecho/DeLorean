@@ -9,12 +9,67 @@
 import XCTest
 import Foundation
 
-public extension String {
-    public func shouldEqual(string: String, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to equal \(string)"
-        XCTAssertEqual(self, string, description, file: file, line: line)
+public extension Equatable {
+    public func shouldEqual<T: Equatable>(other: T, file: String = __FILE__, line: UInt = __LINE__) {
+        let description = "Expected \(self) to equal \(other)"
+        if let other = other as? Self {
+            XCTAssertEqual(self, other, description, file: file, line: line)
+        } else {
+            XCTAssertTrue(false, description, file: file, line: line)
+        }
+    }
+}
+
+public extension Comparable {
+    public func shouldBeGreaterThan<T: Comparable>(other: T, file: String = __FILE__, line: UInt = __LINE__) {
+        let description = "Expected \(self) to be greater than \(other)"
+        if let other = other as? Self {
+            XCTAssertGreaterThan(self, other, description)
+        } else {
+            XCTAssertTrue(false, description)
+        }
     }
     
+    public func shouldBeGreaterThanOrEqualTo<T: Comparable>(other: T, file: String = __FILE__, line: UInt = __LINE__) {
+        let description = "Expected \(self) to be greater than or equal to \(other)"
+        if let other = other as? Self {
+            XCTAssertGreaterThanOrEqual(self, other, description)
+        } else {
+            XCTAssertTrue(false, description)
+        }
+    }
+    
+    public func shouldBeLessThan<T: Comparable>(other: T, file: String = __FILE__, line: UInt = __LINE__) {
+        let message = "Expected \(self) to be less than \(other)"
+        if let other = other as? Self {
+            XCTAssertLessThan(self, other, message)
+        } else {
+            XCTAssertTrue(false, message)
+        }
+    }
+    
+    public func shouldBeLessThanOrEqualTo<T: Comparable>(other: T, file: String = __FILE__, line: UInt = __LINE__) {
+        let message = "Expected \(self) to be less than or Equal to \(other)"
+        if let other = other as? Self {
+            XCTAssertLessThanOrEqual(self, other, message)
+        } else {
+            XCTAssertTrue(false, message)
+        }
+    }
+}
+
+public extension FloatingPointType {
+    public func shouldBeCloseTo<T: FloatingPointType>(other: T, withAccuracy accuracy: T, file: String = __FILE__, line: UInt = __LINE__) {
+        let message = "Expected \(self) to be within \(accuracy) of \(other)"
+        if let other = other as? Self, accuracy = accuracy as? Self {
+            XCTAssertEqualWithAccuracy(self, other, accuracy: accuracy, message, file: file, line: line)
+        } else {
+            XCTAssertTrue(false, message)
+        }
+    }
+}
+
+public extension String {
     public func shouldContain(string: String, file: String = __FILE__, line: UInt = __LINE__) {
         let description = "Expected \(self) to contain \(string)"
         XCTAssertTrue(self.rangeOfString(string) != nil, description, file: file, line: line)
@@ -28,104 +83,6 @@ public extension String {
     public func shouldHaveSuffix(string: String, file: String = __FILE__, line: UInt = __LINE__) {
         let description = "Expected \(self) to have a suffix of \(string)"
         XCTAssertTrue(self.hasSuffix(string), description, file: file, line: line)
-    }
-}
-
-public extension Character {
-    func shouldEqual(character: Character, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to equal \(character)"
-        XCTAssertEqual(self, character, description, file: file, line: line)
-    }
-}
-
-public extension Int {
-    func shouldEqual(int: Int, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to equal \(int)"
-        XCTAssertEqual(self, int, description, file: file, line: line)
-    }
-    
-    func shouldBeGreaterThan(int: Int, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to be greater than \(int)"
-        XCTAssertTrue(self > int, description, file: file, line: line)
-    }
-    
-    func shouldBeLessThan(int: Int, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to be less than \(int)"
-        XCTAssertTrue(self < int, description, file: file, line: line)
-    }
-    
-    func shouldBeGreaterThanOrEqualTo(int: Int, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to be greater than or equal to \(int)"
-        XCTAssertTrue(self >= int, description, file: file, line: line)
-    }
-    
-    func shouldBeLessThanOrEqualTo(int: Int, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to be less than or equal to \(int)"
-        XCTAssertTrue(self <= int, description, file: file, line: line)
-    }
-}
-
-public extension Float {
-    func shouldEqual(float: Float, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to equal \(float)"
-        XCTAssertEqual(self, float, description, file: file, line: line)
-    }
-    
-    func shouldBeGreaterThan(float: Float, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to be greater than \(float)"
-        XCTAssertTrue(self > float, description, file: file, line: line)
-    }
-    
-    func shouldBeLessThan(float: Float, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to be less than \(float)"
-        XCTAssertTrue(self < float, description, file: file, line: line)
-    }
-    
-    func shouldBeGreaterThanOrEqualTo(float: Float, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to be greater than or equal to \(float)"
-        XCTAssertTrue(self >= float, description, file: file, line: line)
-    }
-    
-    func shouldBeLessThanOrEqualTo(float: Float, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to be less than or equal to \(float)"
-        XCTAssertTrue(self <= float, description, file: file, line: line)
-    }
-    
-    func shouldBeCloseTo(float: Float, withAccuracy accuracy: Float, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to be within \(accuracy) of \(float)"
-        XCTAssertEqualWithAccuracy(self, float, accuracy: accuracy, description, file: file, line: line)
-    }
-}
-
-public extension Double {
-    func shouldEqual(double: Double, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to equal \(double)"
-        XCTAssertEqual(self, double, description, file: file, line: line)
-    }
-    
-    func shouldBeGreaterThan(double: Double, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to be greater than \(double)"
-        XCTAssertTrue(self > double, description, file: file, line: line)
-    }
-    
-    func shouldBeLessThan(double: Double, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to be less than \(double)"
-        XCTAssertTrue(self < double, description, file: file, line: line)
-    }
-    
-    func shouldBeGreaterThanOrEqualTo(double: Double, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to be greater than or equal to \(double)"
-        XCTAssertTrue(self >= double, description, file: file, line: line)
-    }
-    
-    func shouldBeLessThanOrEqualTo(double: Double, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to be less than or equal to \(double)"
-        XCTAssertTrue(self <= double, description, file: file, line: line)
-    }
-    
-    func shouldBeCloseTo(double: Double, withAccuracy accuracy: Double, file: String = __FILE__, line: UInt = __LINE__) {
-        let description = "Expected \(self) to be within \(accuracy) of \(double)"
-        XCTAssertEqualWithAccuracy(self, double, accuracy: accuracy, description, file: file, line: line)
     }
 }
 
@@ -163,22 +120,24 @@ public extension NSObject {
     }
 }
 
-public func shouldContain<T: Equatable>(array: [T], item: T, file: String = __FILE__, line: UInt = __LINE__) {
-    let description = "Expected \(array) to contain \(item)"
-    var contains = false
-    
-    for value in array {
-        if value == item {
+public extension CollectionType where Generator.Element : Equatable {
+    func shouldContain(item: Self.Generator.Element, file: String = __FILE__, line: UInt = __LINE__) {
+        
+        let description = "Expected \(self) to contain \(item)"
+        var contains = false
+        
+        if let _ = indexOf(item) {
             contains = true
-            break
         }
+        XCTAssertTrue(contains, description, file: file, line: line)
     }
-    XCTAssertTrue(contains, description, file: file, line: line)
 }
 
-public func shouldBeEmpty<T>(array: [T],file: String = __FILE__, line: UInt = __LINE__) {
-    let description = "Expected \(array) to be empty"
-    XCTAssertTrue(array.isEmpty, description, file: file, line: line)
+public extension CollectionType {
+    func shouldBeEmpty(file: String = __FILE__, line: UInt = __LINE__) {
+        let description = "Expected \(self) to be empty"
+        XCTAssertTrue(isEmpty, description, file: file, line: line)
+    }
 }
 
 public func shouldContain<Key : Hashable, Value: Equatable>(dictionary: [Key : Value], item: Value, file: String = __FILE__, line: UInt = __LINE__) {
@@ -194,27 +153,24 @@ public func shouldContain<Key : Hashable, Value: Equatable>(dictionary: [Key : V
     XCTAssertTrue(contains, description, file: file, line: line)
 }
 
-public func shouldBeEmpty<Key : Hashable, Value>(dictionary: [Key : Value],file: String = __FILE__, line: UInt = __LINE__) {
-    let description = "Expected \(dictionary) to be empty"
-    XCTAssertTrue(dictionary.isEmpty, description, file: file, line: line)
-}
-
-public func shouldBeNil<T>(optional: Optional<T>, file: String = __FILE__, line: UInt = __LINE__) {
-    let description = "Expected \(optional) to be nil"
-    switch optional {
-    case .Some(_):
-        XCTAssertTrue(false, description, file: file, line: line)
-    case .None:
-        XCTAssertTrue(true, description, file: file, line: line)
+public extension Optional {
+    public func shouldBeNil(file: String = __FILE__, line: UInt = __LINE__) {
+        let description = "Expected \(self) to be nil"
+        switch self {
+        case .Some(_):
+            XCTAssertTrue(false, description, file: file, line: line)
+        case .None:
+            XCTAssertTrue(true, description, file: file, line: line)
+        }
     }
-}
-
-public func shouldNotBeNil<T>(optional: Optional<T>, file: String = __FILE__, line: UInt = __LINE__) {
-    let description = "Expected \(optional) to not be nil"
-    switch optional {
-    case .Some(_):
-        XCTAssertTrue(true, description, file: file, line: line)
-    case .None:
-        XCTAssertTrue(false, description, file: file, line: line)
+    
+    public func shouldNotBeNil(file: String = __FILE__, line: UInt = __LINE__) {
+        let description = "Expected \(self) to not be nil"
+        switch self {
+        case .Some(_):
+            XCTAssertTrue(true, description, file: file, line: line)
+        case .None:
+            XCTAssertTrue(false, description, file: file, line: line)
+        }
     }
 }

@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		D202D65C1B0DB2C900F957C7 /* DeLorean-Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = D202D65B1B0DB2C900F957C7 /* DeLorean-Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D202D6621B0DB2C900F957C7 /* DeLorean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D202D6571B0DB2C900F957C7 /* DeLorean.framework */; };
-		D202D6691B0DB2C900F957C7 /* DeLorean_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202D6681B0DB2C900F957C7 /* DeLorean_MacTests.swift */; };
 		D202D6701B0DB2D100F957C7 /* DeLorean.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B0AD19A9D1F300466A83 /* DeLorean.swift */; };
 		D202D6711B0DB2D500F957C7 /* DeLoreanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B09D19A9D19500466A83 /* DeLoreanTests.swift */; };
 		D227F5F01ADA5B0C0093079C /* Miles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D227F5EF1ADA5B0C0093079C /* Miles.framework */; };
 		D227F5F21ADA5B170093079C /* Miles.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D227F5EF1ADA5B0C0093079C /* Miles.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D24D6F691B39F91D005C3F94 /* Miles.framework in Carthage */ = {isa = PBXBuildFile; fileRef = D24D6F681B39F91D005C3F94 /* Miles.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D261DDD41B39F82C00C266AB /* Miles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D261DDD31B39F82C00C266AB /* Miles.framework */; };
 		D2B3B09E19A9D19500466A83 /* DeLoreanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B09D19A9D19500466A83 /* DeLoreanTests.swift */; };
 		D2B3B0B019A9D1F300466A83 /* DeLorean.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3B0AD19A9D1F300466A83 /* DeLorean.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +39,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D24D6F671B39F8F2005C3F94 /* Carthage */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D24D6F691B39F91D005C3F94 /* Miles.framework in Carthage */,
+			);
+			name = Carthage;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -46,9 +57,9 @@
 		D202D65A1B0DB2C900F957C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D202D65B1B0DB2C900F957C7 /* DeLorean-Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeLorean-Mac.h"; sourceTree = "<group>"; };
 		D202D6611B0DB2C900F957C7 /* DeLorean-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DeLorean-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D202D6671B0DB2C900F957C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D202D6681B0DB2C900F957C7 /* DeLorean_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeLorean_MacTests.swift; sourceTree = "<group>"; };
 		D227F5EF1ADA5B0C0093079C /* Miles.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Miles.framework; path = Carthage/Build/iOS/Miles.framework; sourceTree = "<group>"; };
+		D24D6F681B39F91D005C3F94 /* Miles.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Miles.framework; path = Carthage/Build/Mac/Miles.framework; sourceTree = "<group>"; };
+		D261DDD31B39F82C00C266AB /* Miles.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Miles.framework; path = Carthage/Build/Mac/Miles.framework; sourceTree = "<group>"; };
 		D2B3B08E19A9D19500466A83 /* DeLorean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeLorean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B3B09919A9D19500466A83 /* DeLoreanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeLoreanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B3B09D19A9D19500466A83 /* DeLoreanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeLoreanTests.swift; sourceTree = "<group>"; };
@@ -69,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D202D6621B0DB2C900F957C7 /* DeLorean.framework in Frameworks */,
+				D261DDD41B39F82C00C266AB /* Miles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,26 +119,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D202D6651B0DB2C900F957C7 /* DeLorean-MacTests */ = {
-			isa = PBXGroup;
-			children = (
-				D202D6681B0DB2C900F957C7 /* DeLorean_MacTests.swift */,
-				D202D6661B0DB2C900F957C7 /* Supporting Files */,
-			);
-			path = "DeLorean-MacTests";
-			sourceTree = "<group>";
-		};
-		D202D6661B0DB2C900F957C7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D202D6671B0DB2C900F957C7 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		D227F5F31ADA5B1A0093079C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D24D6F681B39F91D005C3F94 /* Miles.framework */,
+				D261DDD31B39F82C00C266AB /* Miles.framework */,
 				D227F5EF1ADA5B0C0093079C /* Miles.framework */,
 			);
 			name = Frameworks;
@@ -139,7 +135,6 @@
 				D2B3B09019A9D19500466A83 /* DeLorean */,
 				D2B3B09A19A9D19500466A83 /* DeLoreanTests */,
 				D202D6581B0DB2C900F957C7 /* DeLorean-Mac */,
-				D202D6651B0DB2C900F957C7 /* DeLorean-MacTests */,
 				D2B3B08F19A9D19500466A83 /* Products */,
 				D227F5F31ADA5B1A0093079C /* Frameworks */,
 			);
@@ -236,6 +231,7 @@
 				D202D65D1B0DB2C900F957C7 /* Sources */,
 				D202D65E1B0DB2C900F957C7 /* Frameworks */,
 				D202D65F1B0DB2C900F957C7 /* Resources */,
+				D24D6F671B39F8F2005C3F94 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -371,7 +367,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D202D6691B0DB2C900F957C7 /* DeLorean_MacTests.swift in Sources */,
 				D202D6711B0DB2D500F957C7 /* DeLoreanTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,13 +455,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "DeLorean-MacTests/Info.plist";
+				INFOPLIST_FILE = "DeLoreanTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.hecho.$(PRODUCT_NAME:rfc1034identifier)";
@@ -484,9 +480,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "DeLorean-MacTests/Info.plist";
+				INFOPLIST_FILE = "DeLoreanTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.hecho.$(PRODUCT_NAME:rfc1034identifier)";
