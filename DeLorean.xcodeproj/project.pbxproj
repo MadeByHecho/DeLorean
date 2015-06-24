@@ -61,7 +61,7 @@
 		D24D6F681B39F91D005C3F94 /* Miles.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Miles.framework; path = Carthage/Build/Mac/Miles.framework; sourceTree = "<group>"; };
 		D261DDD31B39F82C00C266AB /* Miles.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Miles.framework; path = Carthage/Build/Mac/Miles.framework; sourceTree = "<group>"; };
 		D2B3B08E19A9D19500466A83 /* DeLorean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeLorean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2B3B09919A9D19500466A83 /* DeLoreanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeLoreanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2B3B09919A9D19500466A83 /* DeLorean-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DeLorean-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B3B09D19A9D19500466A83 /* DeLoreanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeLoreanTests.swift; sourceTree = "<group>"; };
 		D2B3B0A819A9D1BF00466A83 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2B3B0AB19A9D1C600466A83 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				D2B3B08E19A9D19500466A83 /* DeLorean.framework */,
-				D2B3B09919A9D19500466A83 /* DeLoreanTests.xctest */,
+				D2B3B09919A9D19500466A83 /* DeLorean-iOSTests.xctest */,
 				D202D6571B0DB2C900F957C7 /* DeLorean.framework */,
 				D202D6611B0DB2C900F957C7 /* DeLorean-MacTests.xctest */,
 			);
@@ -261,9 +261,9 @@
 			productReference = D2B3B08E19A9D19500466A83 /* DeLorean.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D2B3B09819A9D19500466A83 /* DeLoreanTests */ = {
+		D2B3B09819A9D19500466A83 /* DeLorean-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D2B3B0A419A9D19500466A83 /* Build configuration list for PBXNativeTarget "DeLoreanTests" */;
+			buildConfigurationList = D2B3B0A419A9D19500466A83 /* Build configuration list for PBXNativeTarget "DeLorean-iOSTests" */;
 			buildPhases = (
 				D2B3B09519A9D19500466A83 /* Sources */,
 				D2B3B09619A9D19500466A83 /* Frameworks */,
@@ -274,9 +274,9 @@
 			);
 			dependencies = (
 			);
-			name = DeLoreanTests;
+			name = "DeLorean-iOSTests";
 			productName = DeLoreanTests;
-			productReference = D2B3B09919A9D19500466A83 /* DeLoreanTests.xctest */;
+			productReference = D2B3B09919A9D19500466A83 /* DeLorean-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -316,7 +316,7 @@
 			projectRoot = "";
 			targets = (
 				D2B3B08D19A9D19500466A83 /* DeLorean-iOS */,
-				D2B3B09819A9D19500466A83 /* DeLoreanTests */,
+				D2B3B09819A9D19500466A83 /* DeLorean-iOSTests */,
 				D202D6561B0DB2C900F957C7 /* DeLorean-OSX */,
 				D202D6601B0DB2C900F957C7 /* DeLorean-MacTests */,
 			);
@@ -509,6 +509,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -614,7 +615,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
@@ -634,7 +634,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
@@ -685,7 +684,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D2B3B0A419A9D19500466A83 /* Build configuration list for PBXNativeTarget "DeLoreanTests" */ = {
+		D2B3B0A419A9D19500466A83 /* Build configuration list for PBXNativeTarget "DeLorean-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D2B3B0A519A9D19500466A83 /* Debug */,

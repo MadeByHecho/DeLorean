@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D20880011A9201C100C6D7AC"
-               BuildableName = "Miles-iOS.framework"
+               BuildableName = "Miles.framework"
                BlueprintName = "Miles-iOS"
                ReferencedContainer = "container:Miles.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D20880011A9201C100C6D7AC"
-            BuildableName = "Miles-iOS.framework"
+            BuildableName = "Miles.framework"
             BlueprintName = "Miles-iOS"
             ReferencedContainer = "container:Miles.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D20880011A9201C100C6D7AC"
-            BuildableName = "Miles-iOS.framework"
+            BuildableName = "Miles.framework"
             BlueprintName = "Miles-iOS"
             ReferencedContainer = "container:Miles.xcodeproj">
          </BuildableReference>
@@ -99,7 +99,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D20880011A9201C100C6D7AC"
-            BuildableName = "Miles-iOS.framework"
+            BuildableName = "Miles.framework"
             BlueprintName = "Miles-iOS"
             ReferencedContainer = "container:Miles.xcodeproj">
          </BuildableReference>

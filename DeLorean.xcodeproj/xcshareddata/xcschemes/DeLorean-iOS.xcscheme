@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D2B3B08D19A9D19500466A83"
-               BuildableName = "DeLorean-iOS.framework"
+               BuildableName = "DeLorean.framework"
                BlueprintName = "DeLorean-iOS"
                ReferencedContainer = "container:DeLorean.xcodeproj">
             </BuildableReference>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D2B3B09819A9D19500466A83"
-               BuildableName = "DeLoreanTests.xctest"
-               BlueprintName = "DeLoreanTests"
+               BuildableName = "DeLorean-iOSTests.xctest"
+               BlueprintName = "DeLorean-iOSTests"
                ReferencedContainer = "container:DeLorean.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D2B3B08D19A9D19500466A83"
-            BuildableName = "DeLorean-iOS.framework"
+            BuildableName = "DeLorean.framework"
             BlueprintName = "DeLorean-iOS"
             ReferencedContainer = "container:DeLorean.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D2B3B08D19A9D19500466A83"
-            BuildableName = "DeLorean-iOS.framework"
+            BuildableName = "DeLorean.framework"
             BlueprintName = "DeLorean-iOS"
             ReferencedContainer = "container:DeLorean.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D2B3B08D19A9D19500466A83"
-            BuildableName = "DeLorean-iOS.framework"
+            BuildableName = "DeLorean.framework"
             BlueprintName = "DeLorean-iOS"
             ReferencedContainer = "container:DeLorean.xcodeproj">
          </BuildableReference>
