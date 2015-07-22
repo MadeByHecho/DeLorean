@@ -192,7 +192,7 @@ class DictionaryTests: XCTestCase {
     
     func testShouldContain() {
         let dictionary = [1 : "one", 2 : "two"]
-        shouldContain(dictionary, item: "one")
+        dictionary.shouldContain("one")
     }
 }
 
